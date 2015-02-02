@@ -319,7 +319,7 @@ html, body{
 }
 
 .envelope_open .letter {
-    top: 70px;
+    top: 0px;
 }
 
 .envelope_open .letter.animate_close {

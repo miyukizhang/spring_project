@@ -206,21 +206,22 @@ $(document).ready(function(){
         }
     });
 
-    var imgUrl = 'https://raw.githubusercontent.com/miyukizhang/interview_project/master/img/interview.jpg';
+    var imgUrl = 'https://raw.githubusercontent.com/miyukizhang/spring_project/master/img/letter.jpg';
     var lineLink = location.href;
-    var descContent = "9月18日前，完成6道高难度面试单选题，丰厚大礼等你来拿";
+    var descContent = '外面的世界再好，最让我们牵挂的还是父母';
     var shareTitle = document.title;
     var appid = '';
+
     function shareFriend() {
-        WeixinJSBridge.invoke('sendAppMessage', {"appid": appid,"img_url": imgUrl,"img_width": "200","img_height": "200","link": lineLink,"desc": descContent,"title": shareTitle}, function(res) {
+        WeixinJSBridge.invoke('sendAppMessage', {'appid': appid,'img_url': imgUrl,'img_width': '200','img_height': '200','link': lineLink,'desc': descContent,'title': shareTitle}, function(res) {
         })
     }
     function shareTimeline() {
-        WeixinJSBridge.invoke('shareTimeline', {"img_url": imgUrl,"img_width": "200","img_height": "200","link": lineLink,"desc": descContent,"title": shareTitle}, function(res) {
+        WeixinJSBridge.invoke('shareTimeline', {'img_url': imgUrl,'img_width': '200','img_height': '200','link': lineLink,'desc': descContent,'title': shareTitle}, function(res) {
         });
     }
     function shareWeibo() {
-        WeixinJSBridge.invoke('shareWeibo', {"content": descContent,"url": lineLink}, function(res) {
+        WeixinJSBridge.invoke('shareWeibo', {'content': descContent,'url': lineLink}, function(res) {
         });
     }
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
