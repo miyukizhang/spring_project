@@ -134,13 +134,13 @@ html, body{
 }
 
 .flap_open {
-    /*background: url('../img/flap_open.png') no-repeat center top;*/
-    background: url('../img/flap.png') no-repeat center top;
+    background: url('../img/flap_open.png') no-repeat center top;
+    /*background: url('../img/flap.png') no-repeat center top;*/
     -webkit-transform-origin: center bottom;
     -webkit-transition-delay: .2s;
     z-index: 7;
-    /*background-size: 231px 106px;*/
-    background-size: 231px 212px;
+    background-size: 231px 106px;
+    /*background-size: 231px 212px;*/
 }
 
 .envelope_open .flap_open{
@@ -198,13 +198,13 @@ html, body{
 }
 
 .flap_closed {
-    /*background: url('../img/flap_closed.png') no-repeat center top;*/
-    background: url('../img/flap.png') no-repeat center -106px;
+    background: url('../img/flap_closed.png') no-repeat center top;
+    /*background: url('../img/flap.png') no-repeat center -106px;*/
     top: 106px;
     height: 106px;
     -webkit-transform-origin: center top;
     z-index: 10;
-    background-size: 231px 212px;
+    background-size: 231px 106px;
 }
 
 .envelope_open .flap_closed{
