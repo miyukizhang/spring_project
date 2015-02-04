@@ -12,8 +12,6 @@ html, body{
     overflow: hidden;
 }
 .loader{
-    /* background: #fff url(../img/loading.gif) center no-repeat; */
-    /* background-size: 29px 5px; */
     position: absolute;
     width: 100%;
     height: 100%;
@@ -40,8 +38,11 @@ html, body{
     animation: loading 0.5s 0 linear both infinite alternate;
 }
 @-webkit-keyframes loading {
+    0%{
+        -webkit-transform: translate3d(0,0,0);
+    }
     100% {
-        top: -20px;
+        -webkit-transform: translate3d(0, -20px, 0);
     }
 }
 .loader .loading_word{
@@ -54,9 +55,9 @@ html, body{
 .view{
     width: 100%;
     height: 100%;
-    -webkit-transition: margin-top 0.3s ease;
-    transition: margin-top 0.3s ease;
-    /*margin-top: -1008px;*/
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -webkit-transform: translate3d(0, 0, 0);
 }
 .md{
     position: relative;
@@ -104,15 +105,18 @@ html, body{
     background-size: 44px;
     width: 44px;
     height: 40px;
-    -webkit-animation: bottom_dir 0.5s 0 linear both infinite alternate;
-    animation: bottom_dir 0.5s 0 linear both infinite alternate;
+    -webkit-animation: bottom_dir 0.8s 0 linear both infinite alternate;
+    animation: bottom_dir 0.8s 0 linear both infinite alternate;
 }
 @-webkit-keyframes bottom_dir {
+    0%{
+        -webkit-transform: translate3d(0,0,0);
+    }
     100% {
-        bottom: 10px;
+        /*bottom: 10px;*/
+        -webkit-transform: translate3d(0, -10px, 0);
     }
 }
-
 
 .envelope_container{
     position: absolute;
@@ -323,8 +327,23 @@ html, body{
 }
 
 .envelope_open .letter.animate_close {
-    top: 265px;
-    -webkit-transition: all 1.5s ease-out;
+    -webkit-animation: letterCloseIn 1.5s 0s forwards ease-in;
+}
+
+@-webkit-keyframes letterCloseIn {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 265px, 0);
+    }
 }
 
 .envelope_close .letter{
@@ -332,17 +351,13 @@ html, body{
 }
 
 .envelope_close .letter.animate_open{
-    -webkit-animation-name: letterOpenIn;
-    -webkit-animation-duration: 0.7s;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-delay: 1.5s;
+    -webkit-animation: letterOpenIn 1.5s 1.5s forwards ease-out;
 }
 
 @-webkit-keyframes letterOpenIn {
     0% {
         opacity: 0;
-        top: 265px;
+        -webkit-transform: translate3d(0, 0, 0);
     }
     
     20% {
@@ -350,7 +365,7 @@ html, body{
     }
     
     100% {
-        top: 0;
+        -webkit-transform: translate3d(0, -265px, 0);
     }
 }
 
@@ -404,6 +419,10 @@ html, body{
 .md_page_fifteen .envelop .send img{
     width: 118px;
     height: 43px;
+}
+
+.md_page_four .text{
+    margin-top: 15px;
 }
 
 .md_page_six{}
@@ -678,7 +697,7 @@ html, body{
 }
 .md_page_six .boy_hand{
     -webkit-animation-delay: 0.8s;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: 6;
 }
 .md_page_six .parent{
     display: none;
@@ -687,11 +706,11 @@ html, body{
 }
 .md_page_six .mon_hand{
     -webkit-animation-delay: 1.3s;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: 7;
 }
 .md_page_six .father_hand{
     -webkit-animation-delay: 1.3s;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: 7;
 }
 .md_page_six .text .item_one{
     display: none;

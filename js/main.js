@@ -153,7 +153,8 @@ $(document).ready(function(){
 
     function pageScroll(pageNum, dir){
         var marginT = winH * pageNum;
-        wrap.css({"margin-top": -marginT});
+//        wrap.css({"margin-top": -marginT});
+        wrap.css({'-webkit-transform': 'translate3d(0, ' + (-marginT) + 'px, 0)'});
         setTimeout(function(){
             if(dir === "up"){
                 var parNum = pageNum + 1;
