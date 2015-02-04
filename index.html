@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/animate.css"/>
-    <link rel="stylesheet" type="text/css" href="css/animation.css?v=1.4"/>
-    <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.7"/>
+    <link rel="stylesheet" type="text/css" href="css/animation.css?v=1.8"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.8"/>
     <title>小企鹅的一封家书</title>
 </head>
 <style>
     .preload{
+        display: none;
         width: 1px;
         height: 0;
     }
@@ -35,18 +36,18 @@
         font-size: 10px;
         position: relative;
         text-indent: -9999em;
-        border-top: 0.6em solid #fecc57;
-        border-right: 0.6em solid #fecc57;
-        border-bottom: 0.6em solid #fecc57;
-        border-left: 0.6em solid #ffb300;
+        border-top: 0.5em solid #fecc57;
+        border-right: 0.5em solid #fecc57;
+        border-bottom: 0.5em solid #fecc57;
+        border-left: 0.5em solid #ffb300;
         -webkit-animation: load8 1.1s infinite linear;
         animation: load8 1.1s infinite linear;
     }
     .loading,
     .loading:after {
         border-radius: 50%;
-        width: 4em;
-        height: 4em;
+        width: 3em;
+        height: 3em;
     }
     @-webkit-keyframes load8 {
         0% {
@@ -72,8 +73,6 @@
 <body>
     <div class="loader" id="page_loader">
         <div class="loading_container">
-            <!--<div class="loading"></div>
-            <div class="loading_word"></div>-->
             <div class="loading">Loading...</div>
         </div>
     </div>
@@ -91,7 +90,7 @@
                     <div class="envelope_close">
                         <div class="envelope_container">
                             <div class="letter_container">
-                                <div class="letter"></div>
+                                <div class="letter show_next"></div>
                             </div>
                             <div class="flap_open"></div>
                             <div class="flap_closed"></div>
@@ -101,6 +100,7 @@
                     </div>
                     <a href="javascript:;" class="read" id="read"><img src="img/1_read.png"/></a>
                 </div>
+                <a class="next_page" href="javascript:;" style="display: none"></a>
             </div>
         </section>
         <section class="md md_page_two">
@@ -182,27 +182,19 @@
         <section class="md md_page_eight">
             <div class="main main_eight">
                 <div class="image">
-                    <img class="bg" src="img/8_bg.png"/>
-                    <img class="qq" src="img/8_qq.png"/>
-                    <img class="tencent" src="img/8_tencent.png"/>
-                </div>
-                <div class="text">
-                    <img class="item" src="img/8_text.png"/>
-                </div>
-            </div>
-            <a class="next_page" href="javascript:;"></a>
-        </section>
-        <section class="md md_page_nine">
-            <div class="main main_nine">
-                <div class="image">
                     <img class="girl_back" src="img/9_girl_back.png"/>
-                    <img class="bg" src="img/9_bg.png"/>
+                    <img class="bg" src="img/8_bg.png"/>
+                    <img class="child child_1" src="img/8_child.png"/>
+                    <img class="child child_2" src="img/8_child_2.png"/>
+                    <img class="desk" src="img/8_desk.png"/>
+                    <img class="tencent" src="img/8_tencent.png"/>
                     <img class="girl" src="img/9_girl.png"/>
                     <img class="boy" src="img/9_boy.png"/>
                     <img class="ribbon" src="img/9_ribbon.png"/>
                 </div>
-                <div class="text">
-                    <img class="item" src="img/9_text.png"/>
+                <div class="text text_set">
+                    <img class="item item_one" src="img/8_text.png"/>
+                    <img class="item item_two" src="img/9_text.png"/>
                 </div>
             </div>
             <a class="next_page" href="javascript:;"></a>
@@ -319,6 +311,6 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/lib/imageload/imageload.js"></script>
-    <script src="js/main.js?v=1.4"></script>
+    <script src="js/main.js?v=1.8"></script>
 </body>
 </html>

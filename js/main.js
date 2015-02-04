@@ -111,14 +111,23 @@ $(document).ready(function(){
             '.main_six .child': 'fadeInRight',
             '.main_six .hand': 'swing',
             '.main_seven .text .item': 'bounceInRight',
-            '.main_eight .text .item': 'fadeInDown',
-            '.main_eight .qq': 'fadeIn',
+            /*'.main_eight .text .item': 'fadeInDown',*/
+            /*'.main_eight .qq': 'fadeIn',*/
             '.main_eight .tencent': 'rubberBand',
-            '.main_nine .text .item': 'fadeInDown',
+            '.main_eight .child_1': 'fadeOut',
+            '.main_eight .child_2': 'fadeIn',
+
+            '.main_eight .text .item_one': 'fadeInDownOut',
+            '.main_eight .text .item_two': 'fadeInDown',
+            '.main_eight .girl_back': 'zoomIn',
+            '.main_eight .girl': 'fadeInLeft',
+            '.main_eight .boy': 'fadeInRight',
+            '.main_eight .ribbon': 'burst',
+            /*'.main_nine .text .item': 'fadeInDown',
             '.main_nine .girl_back': 'zoomIn',
             '.main_nine .girl': 'fadeInLeft',
             '.main_nine .boy': 'fadeInRight',
-            '.main_nine .ribbon': 'burst',
+            '.main_nine .ribbon': 'burst',*/
             '.main_ten .text .item': 'fadeInDown',
             '.main_ten .child': 'fadeIn',
             '.main_ten .girl': 'zoomIn',
@@ -126,12 +135,12 @@ $(document).ready(function(){
             '.main_ten .ribbon': 'snow',
             '.main_eleven .text .item': 'fadeInDown',
             '.main_eleven .couple': 'fadeInUp',
-            '.main_eleven .house': 'bounceInDown',
+            '.main_eleven .house': 'splat',
             '.main_eleven .hand': 'swing',
             '.main_eleven .star': 'fadeIn',
             '.main_eleven .star_flicker': 'flash',
             '.main_twelve .text .item': 'fadeInDown',
-            '.main_twelve .fuli img': 'bounceInDown',
+            '.main_twelve .fuli img': 'zoomIn',
             '.main_thirteen .text .item': 'fadeInDown',
             '.main_thirteen .fuli .fuli_1': 'fuliRight',
             '.main_thirteen .fuli .fuli_3': 'fuliRight',
@@ -146,7 +155,7 @@ $(document).ready(function(){
 
         var $container = $('.current');
         for(var selector in effects){
-            $(selector, $container).hide();
+            $(selector).hide();
             $(selector, $container).show().addClass('animated ' + effects[selector]);
         }
     }
@@ -181,6 +190,7 @@ $(document).ready(function(){
             $('.envelope_close .flap_open').addClass('animate_open');
             $('.envelope_close .letter').addClass('animate_open');
             $(this).addClass('show_next');
+            $('.next_page').delay(2000).fadeIn();
         }
     });
 
@@ -200,7 +210,7 @@ $(document).ready(function(){
         }
     });
 
-    $('.next_page').on('click', function(){
+    $('.next_page, .show_next').on('click', function(){
         if(pageNum <= mdSize-1){
             pageNum++;
             pageScroll(pageNum);
