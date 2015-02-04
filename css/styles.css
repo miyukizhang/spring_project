@@ -11,45 +11,9 @@ html, body{
     height: 100%;
     overflow: hidden;
 }
-.loader{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    background-color: #fff;
-}
-.loader .loading_container{
-    position: absolute;
-    top: 50%;
-    margin-top: -50px;
-    left: 50%;
-    margin-left: -30px;
-    width: 60px;
-    height: 90px;
-}
-.loader .loading{
-    position: relative;
-    top: 0;
-    width: 60px;
-    height: 60px;
-    background: url(../img/loading.png) 0 0 no-repeat;
-    background-size: 60px 90px;
-    -webkit-animation: loading 0.5s 0 linear both infinite alternate;
-    animation: loading 0.5s 0 linear both infinite alternate;
-}
-@-webkit-keyframes loading {
-    0%{
-        -webkit-transform: translate3d(0,0,0);
-    }
-    100% {
-        -webkit-transform: translate3d(0, -20px, 0);
-    }
-}
-.loader .loading_word{
-    width: 60px;
-    height: 30px;
-    background: url(../img/loading.png) center -60px no-repeat;
-    background-size: 60px 90px;
+.preload{
+    width: 1px;
+    height: 0;
 }
 
 .view{
@@ -151,20 +115,20 @@ html, body{
 
 .envelope {
     bottom: 0;
-    background: url('../img/envelope.png') no-repeat center top;
+    background: url('../img/envelope.png') no-repeat center -170px;
     width: 250px;
     height: 170px;
     z-index: 1;
-    background-size: 231px 160px;
+    background-size: 250px 340px;
 }
 
 .envelope_front {
     bottom: 0;
-    background: url('../img/envelope_front.png') no-repeat center top;
+    background: url('../img/envelope.png') no-repeat center top;
     width: 250px;
     height: 170px;
     z-index: 9;
-    background-size: 250px 170px;
+    background-size: 250px 340px;
 }
 
 .flap_open, .flap_closed {
@@ -175,11 +139,13 @@ html, body{
 }
 
 .flap_open {
-    background: url('../img/flap_open.png') no-repeat center top;
+    /*background: url('../img/flap_open.png') no-repeat center top;*/
+    background: url('../img/flap.png') no-repeat center top;
     -webkit-transform-origin: center bottom;
     -webkit-transition-delay: .2s;
     z-index: 7;
-    background-size: 231px 106px;
+    /*background-size: 231px 106px;*/
+    background-size: 231px 212px;
 }
 
 .envelope_open .flap_open{
@@ -210,12 +176,7 @@ html, body{
 }
 
 .envelope_close .flap_open {
-    background: url('../img/flap_open.png') no-repeat center top;
-    -webkit-transform-origin: center bottom;
-    -webkit-transition-delay: .2s;
     -webkit-transform: rotateX(-90deg);
-    z-index: 7;
-    background-size: 231px 106px;
 }
 
 .flap_open.animate_open {
@@ -242,11 +203,13 @@ html, body{
 }
 
 .flap_closed {
-    background: url('../img/flap_closed.png') no-repeat center top;
+    /*background: url('../img/flap_closed.png') no-repeat center top;*/
+    background: url('../img/flap.png') no-repeat center -106px;
     top: 106px;
+    height: 106px;
     -webkit-transform-origin: center top;
     z-index: 10;
-    background-size: 231px 106px;
+    background-size: 231px 212px;
 }
 
 .envelope_open .flap_closed{

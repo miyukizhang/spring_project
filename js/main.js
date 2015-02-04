@@ -84,7 +84,7 @@ $(document).ready(function(){
     });
 
     //load image
-    imagesLoaded( $('.md_page_one'), function() {
+    imagesLoaded( $('#preload'), function() {
         $('#page_loader').delay(200).fadeOut();
         addAnimation();
     });

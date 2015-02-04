@@ -5,16 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/animate.css"/>
-    <link rel="stylesheet" type="text/css" href="css/animation.css?v=1"/>
-    <link rel="stylesheet" type="text/css" href="css/styles.css?v=1"/>
+    <link rel="stylesheet" type="text/css" href="css/animation.css?v=1.4"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.4"/>
     <title>小企鹅的一封家书</title>
 </head>
+<style>
+    .loader{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        background-color: #fff;
+    }
+    .loader .loading_container{
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 50%;
+        margin-left: -50px;
+        width: 100px;
+        height: 90px;
+    }
+    .loading {
+        margin: 0 auto;
+        font-size: 10px;
+        position: relative;
+        text-indent: -9999em;
+        border-top: 0.6em solid #fecc57;
+        border-right: 0.6em solid #fecc57;
+        border-bottom: 0.6em solid #fecc57;
+        border-left: 0.6em solid #ffb300;
+        -webkit-animation: load8 1.1s infinite linear;
+        animation: load8 1.1s infinite linear;
+    }
+    .loading,
+    .loading:after {
+        border-radius: 50%;
+        width: 4em;
+        height: 4em;
+    }
+    @-webkit-keyframes load8 {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes load8 {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+</style>
 <body>
     <div class="loader" id="page_loader">
         <div class="loading_container">
-            <div class="loading"></div>
-            <div class="loading_word"></div>
+            <!--<div class="loading"></div>
+            <div class="loading_word"></div>-->
+            <div class="loading">Loading...</div>
         </div>
+    </div>
+    <div class="preload" id="preload">
+        <img src="img/envelope.png"/>
+        <img src="img/flap.png"/>
+        <img src="img/letter.png"/>
+        <img src="img/1_read.png"/>
     </div>
     <div class="view" id="view">
         <section class="md md_page_one current">
@@ -251,6 +314,6 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/lib/imageload/imageload.js"></script>
-    <script src="js/main.js?v=1.2"></script>
+    <script src="js/main.js?v=1.4"></script>
 </body>
 </html>
