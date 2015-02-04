@@ -285,7 +285,7 @@ html, body{
 }
 
 .envelope_open .letter.animate_close {
-    -webkit-animation: letterCloseIn 1.5s 0s forwards ease-out;
+    -webkit-animation: letterCloseIn 1s 0s forwards ease-out;
 }
 
 @-webkit-keyframes letterCloseIn {
@@ -309,7 +309,7 @@ html, body{
 }
 
 .envelope_close .letter.animate_open{
-    -webkit-animation: letterOpenIn 1.5s 1.5s forwards ease-out;
+    -webkit-animation: letterOpenIn 1s 1.5s forwards ease-out;
 }
 
 @-webkit-keyframes letterOpenIn {
